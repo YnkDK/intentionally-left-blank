@@ -1,5 +1,14 @@
-account_id = ""
-name = "my-site"
+account_id = "f1ff3fb98b76ac79e9f9de16ec48a1e9"
+name = "intentionally-left-blank"
 type = "webpack"
 workers_dev = true
 site = { bucket = "./public" }
+vars = { ENVIRONMENT = "dev" }
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+# The ID of the domain to deploying to
+zone_id = "ba020e9dbef80f5d6326875ed4211ddc"
+
+# The route pattern your Workers application will be served at
+route = "mastdi.eu/*"

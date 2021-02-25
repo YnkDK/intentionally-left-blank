@@ -7,7 +7,7 @@ import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler'
  * 2. we will return an error message on exception in your Response rather
  *    than the default 404.html page.
  */
-const DEBUG = false
+const DEBUG = ENVIRONMENT !== "production"
 
 addEventListener('fetch', event => {
   try {
@@ -41,17 +41,34 @@ async function handleEvent(event) {
         bypassCache: true,
       }
     }
-
+    const nonce = Math.random().toString(36).substring(7)
     const page = await getAssetFromKV(event, options)
-
     // allow headers to be altered
-    const response = new Response(page.body, page)
-
-    response.headers.set('X-XSS-Protection', '1; mode=block')
-    response.headers.set('X-Content-Type-Options', 'nosniff')
+    var body = await page.text()
+    const siteData = {
+      'random-nonce': nonce
+    }
+    for (var key in siteData) {
+      if (!siteData.hasOwnProperty(key)) {
+        continue;
+      }
+  
+      body = body.replace(key, siteData[key]);
+    }
+    const response = new Response(body, page)
+    var contentMimeType = 'text/plain; charset=UTF-8'
+    if (body.startsWith('<!DOCTYPE html>')) {
+      contentMimeType = 'text/html; charset=UTF-8'
+    } else if(body.startsWith('<?xml')) {
+      contentMimeType = 'text/xml; charset=UTF-8'
+    }
+    response.headers.set('Content-Type', contentMimeType)
     response.headers.set('X-Frame-Options', 'DENY')
-    response.headers.set('Referrer-Policy', 'unsafe-url')
-    response.headers.set('Feature-Policy', 'none')
+    response.headers.set('X-Content-Type-Options', 'nosniff')
+    response.headers.set('Content-Security-Policy', "default-src 'none'; style-src 'nonce-random-nonce'; font-src data:; img-src data:; frame-ancestors 'none';".replace('random-nonce', nonce))
+    response.headers.set('Referrer-Policy', 'same-origin')
+    response.headers.set('X-XSS-Protection', '1; mode=block')
+    response.headers.set('Cache-Control', 'public, max-age=180')
 
     return response
 

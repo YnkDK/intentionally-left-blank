@@ -1,0 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:martin@storgaarddieu.com
+Encryption: https://api.protonmail.ch/pks/lookup?op=get&search=martin@storgaarddieu.com
+Preferred-Languages: en, da
+Canonical: https://storgaarddieu.com/.well-known/security.txt
+Policy: https://storgaarddieu.com/about/security-policy
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE0uHqmtDbtXsuc9PNx6pwo5F+HMwFAmAuwrcACgkQx6pwo5F+
+HMy0wQ//eY58G/3umC7O7x8HEdmdEQ594FnmIiFTXYGoBI4b8t4mwtZkVixO+Uya
+pBP2AXD+SUglGfxFEA3JpPjLca/WqLe081xDO4w6XmMmWFmQHLQXzzp7OWZbZQTK
+R06kYqzxiP2RC6dgF7V7adxbi0xeAX9QUZBVP7/hnrV4BkkqH8b1u1hqUJ7ARcb4
+JJYmRDuIh2C2P6SOYlSD8Pvtwya4DT3SgLa5C/e86pzVgnfQSXAhX8kVomwY5ABN
+cX3SCcYZJe32YwGYmJ6uWpCa0wT88HiXJ2FhZWXJDUp+PVCMyvebwZMZEV1NDoM2
+dX0BQ7v9UkYBlwfxupn5+ZnnlTEDcCtllnob3suE0iB9tjvq9uHhEcrx6yQkF5gB
++7dOidSA6Afa5zFahm+epb2K+HRc1GylyMxuOsSdnja1z5yNuVF1EJzzS9jqfPzR
+UVhhDKw0DLFM1d3z0RMCABB1IaQ3OH6nxAsTKwo+D7JNJTgOTGRo0eJv3IWGw5vR
+hZ1Qz1WJUGEgvOkyurZAOC0YJ/MgnGx9++vOrp2jYhqJJb0mxS6GFtJGyiYGpBS1
+dlLs4Udzh+BmF/fdfv0r30+wx/ndUjZmAZz+VTzdiIlwFTV6ek0oBqXuFKtxPQ1I
+3Mva5aeAtIqwdQramhSl9wDG64M9hiJowvQhiYGP78x90HeAnrc=
+=gD/A
+-----END PGP SIGNATURE-----
