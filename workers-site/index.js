@@ -18,7 +18,6 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
-  const url = new URL(event.request.url)
   let options = {}
 
   try {
@@ -33,7 +32,7 @@ async function handleEvent(event) {
     const response = new Response(page.body, page)
     response.headers.set('X-Frame-Options', 'DENY')
     response.headers.set('X-Content-Type-Options', 'nosniff')
-    response.headers.set('Content-Security-Policy', "default-src 'none'; style-src 'sha256-ZtqlpMoMPKqQVk7mPdUDgf4zLcSk9oXS7P3JSGwQFWA='; font-src data:; img-src data:; frame-ancestors 'none';")
+    response.headers.set('Content-Security-Policy', "default-src 'none'; style-src 'sha256-hX9S1JB5P1Ag8+1gSqzoVQTFEulZ7dXUvLzkKOc1p9c='; font-src data:; img-src data:; frame-ancestors 'none';")
     response.headers.set('Referrer-Policy', 'same-origin')
     response.headers.set('X-XSS-Protection', '1; mode=block')
     response.headers.set('Cache-Control', 'public, max-age=180')
@@ -49,7 +48,7 @@ async function handleEvent(event) {
         })
 
         return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
-      } catch (e) {}
+      } catch (exception) {}
     }
 
     return new Response(e.message || e.toString(), { status: 500 })
