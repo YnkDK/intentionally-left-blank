@@ -21,11 +21,14 @@ In addition to the page displaying a clear message to the visitor, this project 
 - robots.txt
 - security.txt
 - sitemap
-- health check monitoring using Postman
-- automated tests
 - static code analysis using SonarCloud
 - continuous deployment using GitHub actions
 - security and serverless using Cloudflare Workers
+
+# Road map
+- health check monitoring using Postman
+- automated tests
+- more documentation
 
 # Configuration
 By using the raw index.html it requires no configuration. 
