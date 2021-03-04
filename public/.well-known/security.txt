@@ -1,24 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
+Canonical: https://mastdi.eu/.well-known/security.txt
+Canonical: https://storgaarddieu.com/.well-known/security.txt
 Contact: mailto:martin@storgaarddieu.com
 Encryption: https://api.protonmail.ch/pks/lookup?op=get&search=martin@storgaarddieu.com
+Expires: Fri, 31 Dec 2021 12:00:00 -0000
+Policy: https://mastdi.eu/about/security-policy.txt
 Preferred-Languages: en, da
-Canonical: https://storgaarddieu.com/.well-known/security.txt
-Policy: https://storgaarddieu.com/about/security-policy
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCAAdFiEE0uHqmtDbtXsuc9PNx6pwo5F+HMwFAmAuwrcACgkQx6pwo5F+
-HMy0wQ//eY58G/3umC7O7x8HEdmdEQ594FnmIiFTXYGoBI4b8t4mwtZkVixO+Uya
-pBP2AXD+SUglGfxFEA3JpPjLca/WqLe081xDO4w6XmMmWFmQHLQXzzp7OWZbZQTK
-R06kYqzxiP2RC6dgF7V7adxbi0xeAX9QUZBVP7/hnrV4BkkqH8b1u1hqUJ7ARcb4
-JJYmRDuIh2C2P6SOYlSD8Pvtwya4DT3SgLa5C/e86pzVgnfQSXAhX8kVomwY5ABN
-cX3SCcYZJe32YwGYmJ6uWpCa0wT88HiXJ2FhZWXJDUp+PVCMyvebwZMZEV1NDoM2
-dX0BQ7v9UkYBlwfxupn5+ZnnlTEDcCtllnob3suE0iB9tjvq9uHhEcrx6yQkF5gB
-+7dOidSA6Afa5zFahm+epb2K+HRc1GylyMxuOsSdnja1z5yNuVF1EJzzS9jqfPzR
-UVhhDKw0DLFM1d3z0RMCABB1IaQ3OH6nxAsTKwo+D7JNJTgOTGRo0eJv3IWGw5vR
-hZ1Qz1WJUGEgvOkyurZAOC0YJ/MgnGx9++vOrp2jYhqJJb0mxS6GFtJGyiYGpBS1
-dlLs4Udzh+BmF/fdfv0r30+wx/ndUjZmAZz+VTzdiIlwFTV6ek0oBqXuFKtxPQ1I
-3Mva5aeAtIqwdQramhSl9wDG64M9hiJowvQhiYGP78x90HeAnrc=
-=gD/A
+iQIzBAEBCAAdFiEE0uHqmtDbtXsuc9PNx6pwo5F+HMwFAmBAqbgACgkQx6pwo5F+
+HMw9Xg/+MaMfxdJw7l4Cqggy9qx9j3tW6ovGhPjqpLPjgLjr+0kPChZ/mnlHK1Vi
+D/vjDlOkO2dRRzj/YHlH0IKQaKSGUAo73qcoehtVlAQ0WWtxEeMWWsTp8A4Aah+5
+yJqfloH+juvONLH9cuDymYvlpR4VHz+CkyA4UfjS0YTr8mfHFxxYrGdGRANtS+ZV
+Xf06Voja1kIX4yHiVZg4dizShW2oGIWrQ4K52jt9xyWn0WbWzOUVA/lqQdzt9eo2
+gjTMsjbqrKu80+ihkK8oXR9kjPlFeUD9YNx6x1v/be8jFABN3M0j/F3apTZ44iSJ
+xcISpZXUpumWDU2Amzh83g8gUwuIu4OLPPlRVfjLglRWZfS8yAeR1mL4VQ+sWbbv
+VcF3gldV5FSzR/j+bplExAC0Lz8NNZuUsggNMjbklnMEY4T7E12aITdzHAPFZkx9
+DaMIwFqXvRXWLjFg+KYlYB4SMNGQuwdTcIOX3nPtGdEsLPXAaQkUGKLzaCALigcZ
+FfUq8hxWRPiV7BnZWQgXgsyZW7QH7Gv6kfxkuyxk4duSk6SQJyHK4B5fLaCi/Mtb
+TrNR+gNnBLKvBksGMnjYwP2cGW8j/Ayrvy90VL5vwQfllLYbkiB2tVrGWPlBb7BL
+MOb+QFQ0k9DWgYNHJ5ndKYnD59U2xZ5qNXkBNmnigagUfXDT+C0=
+=IGAi
 -----END PGP SIGNATURE-----
