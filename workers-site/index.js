@@ -18,6 +18,7 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
+  const url = new URL(event.request.url)
   let options = {}
 
   try {
@@ -28,7 +29,7 @@ async function handleEvent(event) {
       }
     }
     const page = await getAssetFromKV(event, options)
-    return createResponseFromAsset(page)
+    return createResponseFromAsset(url.pathname, page)
 
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
@@ -38,7 +39,7 @@ async function handleEvent(event) {
           mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
         })
 
-        return createResponseFromAsset(notFoundResponse, 404)
+        return createResponseFromAsset('404.html', notFoundResponse, 404)
       } catch (exception) {}
     }
 
@@ -46,16 +47,25 @@ async function handleEvent(event) {
   }
 }
 
-function createResponseFromAsset(asset, status) {
+function createResponseFromAsset(pathname, asset, status) {
   if (!status) {
     status = 200
   }
   const response = new Response(asset.body, { ...asset, status: status })
-  response.headers.set('X-Frame-Options', 'DENY')
   response.headers.set('X-Content-Type-Options', 'nosniff')
-  response.headers.set('Content-Security-Policy', "default-src 'none'; style-src 'sha256-OxrRvzObqSg2fwkw34gim/FIUm59v+w4k1LAtP/LrBU='; font-src data:; img-src data:; frame-ancestors 'none';")
-  response.headers.set('Referrer-Policy', 'same-origin')
-  response.headers.set('X-XSS-Protection', '1; mode=block')
-  response.headers.set('Cache-Control', 'public, max-age=180')
+  
+  if (pathname.startsWith('/static/')) {
+    response.headers.set('Cache-Control', 'public, max-age=31536000')
+  } else {
+    response.headers.set('Cache-Control', 'public, max-age=180')
+  }
+
+  const contentType = response.headers.get('content-type')
+  if (contentType && contentType.startsWith('text/html')) {
+    response.headers.set('Content-Security-Policy', "default-src 'none'; style-src 'self'; font-src data:; img-src data:; frame-ancestors 'none';")
+    response.headers.set('X-XSS-Protection', '1; mode=block')
+    response.headers.set('X-Frame-Options', 'DENY')
+    response.headers.set('Referrer-Policy', 'same-origin')
+  }
   return response
 }
