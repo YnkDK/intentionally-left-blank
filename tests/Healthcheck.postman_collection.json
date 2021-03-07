@@ -20,7 +20,26 @@
 							"pm.test(\"Is HTML with text\", function() {",
 							"    pm.expect(pm.response.headers.get('Content-Type')).to.include('text/html');",
 							"    pm.expect(pm.response.text()).to.include('This page intentionally left blank');",
-							"})"
+							"})",
+							"",
+							"const cloudflareCacheStatus = pm.response.headers.get('CF-Cache-Status')",
+							"if (cloudflareCacheStatus && cloudflareCacheStatus === 'MISS') {",
+							"    console.log('Cache miss, rerun until cache is warm.')",
+							"    postman.setNextRequest('Frontpage')",
+							"} else {",
+							"    pm.test(\"Response time is less than 100ms\", function () {",
+							"        pm.expect(pm.response.responseTime).to.be.below(100);",
+							"    });",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
 						],
 						"type": "text/javascript"
 					}
