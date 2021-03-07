@@ -11,6 +11,7 @@ I want to see a clear message indicating that nothing is to be found on said dom
 So that I know it's intentionally left blank
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=YnkDK_intentionally-left-blank&metric=alert_status)](https://sonarcloud.io/dashboard?id=YnkDK_intentionally-left-blank)
+![Health Check Status](https://img.shields.io/endpoint?color=a&url=https%3A%2F%2Fshieldsio.mastdi.workers.dev%2Fshields%2Fcklw9viae000001mtbhtu9ucn)
 
 # Getting started
 - TODO: public/index.html
@@ -24,9 +25,9 @@ In addition to the page displaying a clear message to the visitor, this project 
 - static code analysis using SonarCloud
 - continuous deployment using GitHub actions
 - security and serverless using Cloudflare Workers
+- health check monitoring using Postman
 
 # Road map
-- health check monitoring using Postman
 - automated tests
 - more documentation
 
