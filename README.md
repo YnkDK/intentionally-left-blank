@@ -11,7 +11,7 @@ I want to see a clear message indicating that nothing is to be found on said dom
 So that I know it's intentionally left blank
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=YnkDK_intentionally-left-blank&metric=alert_status)](https://sonarcloud.io/dashboard?id=YnkDK_intentionally-left-blank)
-![Health Check Status](https://img.shields.io/endpoint?color=a&url=https%3A%2F%2Fshieldsio.mastdi.workers.dev%2Fshields%2Fcklw9viae000001mtbhtu9ucn)
+![Health Check Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fshieldsio.mastdi.workers.dev%2Fshields%2Fcklw9viae000001mtbhtu9ucn)
 
 # Getting started
 - TODO: public/index.html
