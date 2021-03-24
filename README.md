@@ -14,27 +14,34 @@ So that I know it's intentionally left blank
 ![Health Check Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fshieldsio.mastdi.workers.dev%2Fshields%2Fcklw9viae000001mtbhtu9ucn)
 
 # Getting started
-- TODO: public/index.html
-- TODO: Cloudflare
+The site is live at [storgaarddieu.com](https://storgaarddieu.com/). 
+
+The [public](/public) directoy can be served using any web server capable of serving static files.
 
 # Features
 In addition to the page displaying a clear message to the visitor, this project covers:
+- Static code analysis using SonarCloud
+- Continuous deployment using GitHub actions
+- Security and serverless using Cloudflare Workers
+- Health check monitoring using Postman
 - robots.txt
 - security.txt
-- sitemap
-- static code analysis using SonarCloud
-- continuous deployment using GitHub actions
-- security and serverless using Cloudflare Workers
-- health check monitoring using Postman
+- Sitemap
 
 # Road map
-- automated tests
-- more documentation
+- Deploy with Terraform
+- Quality gates on PR
+  - Provision resources with same life-cycle as each pull request
+  - Run Healthcheck using Postman Newman
+- Globalization, Internationalization and Localization
+- Automated tests
+- More documentation
+  - security.txt (PGP signature for example)
+  - Fonts and their tools
+  - HTML checkers and other tools
 
 # Configuration
-By using the raw index.html it requires no configuration. 
-
 If the page should be deployed to Cloudflare Workers the wrangler.toml should be updated according to [their documentation](https://developers.cloudflare.com/workers/).
 
 # Licensing 
-MIT
+[MIT](/LICENSE)
