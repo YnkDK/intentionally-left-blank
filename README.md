@@ -19,17 +19,25 @@ So that I know it's intentionally left blank
 
 # Features
 In addition to the page displaying a clear message to the visitor, this project covers:
+- Static code analysis using SonarCloud
+- Continuous deployment using GitHub actions
+- Security and serverless using Cloudflare Workers
+- Health check monitoring using Postman
 - robots.txt
 - security.txt
-- sitemap
-- static code analysis using SonarCloud
-- continuous deployment using GitHub actions
-- security and serverless using Cloudflare Workers
-- health check monitoring using Postman
+- Sitemap
 
 # Road map
-- automated tests
-- more documentation
+- Deploy with Terraform
+- Quality gates on PR
+  - Provision resources with same life-cycle as each pull request
+  - Run Healthcheck using Postman Newman
+- Globalization, Internationalization and Localization
+- Automated tests
+- More documentation
+  - security.txt (PGP signature for example)
+  - Fonts and their tools
+  - HTML checkers and other tools
 
 # Configuration
 By using the raw index.html it requires no configuration. 
@@ -37,4 +45,4 @@ By using the raw index.html it requires no configuration.
 If the page should be deployed to Cloudflare Workers the wrangler.toml should be updated according to [their documentation](https://developers.cloudflare.com/workers/).
 
 # Licensing 
-MIT
+[MIT](/LICENSE)
